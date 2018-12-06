@@ -1,0 +1,12 @@
+@import '~angular-tree-component/dist/angular-tree-component.css';
+
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Angular components */
+app-login, app-profiles {
+    width: 100%;
+}
+

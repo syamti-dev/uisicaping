@@ -1,0 +1,75 @@
+//
+// Application Variables
+//-----------------------------------------------------
+
+// Primary font
+//$body-font: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+//$body-font: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+//
+// Theme Colors
+//
+
+$white: #fff;
+
+// Primary color is the main color of the application which is used 
+// for navbar, active links and primary button.
+
+// ------ Primary Colors from google material design color palette ------
+// Blue  : #2196F3
+// Teal  : #009688
+// Green : #4CAF50
+// Brown : #795548
+// Purple: #673AB7
+
+$primary-color: #1B8BF9;
+
+/* Paelete colors */
+$blue:    #2196f3; // Primary color
+//$indigo:  #6610f2 !default;
+//$purple:  #6f42c1 !default;
+//$pink:    #e83e8c !default;
+$red:     #ff5252; // Danger
+//$orange:  #fd7e14 !default;
+$yellow:  #f57c00; // Warning
+$green:   #4caf50; // Success
+//$teal:    #20c997 !default;
+$cyan: #40c4ff; // Info
+
+// Umbral para el color de contraste, para corregir el caso del cyan
+$yiq-contrasted-threshold:  170;
+
+
+// Complementry color is used to indecate the loading bar on the top
+// of the page with pace.js plugin
+$complementry-color: adjust_hue($primary-color, 180);
+
+// ------- Sidebar Width --------
+$sidebar-width: 230px;
+
+// ------- Sidebar Colors --------
+
+// Background color of sidebar
+$sidebar-color: #fff;
+//$sidebar-color: #fff7c0;
+//$sidebar-color: $white;
+
+// -- Suggested sidebar background colors
+// dark  : #222d32
+// light : #f8f8f8
+
+// Sidebar accent varible is used to determine the color of the links
+// of the sidebar. The allowed values are 'light' or 'dark' only
+$sidebar-accent: light;
+
+// The following varibles indecate sidebar link color
+// and link hover color when using a dark sidebar color
+$sidebar-dark-color: #fff;
+$sidebar-dark-link-color: #fff;
+
+// The following varibles indecate sidebar link color
+// and link hover color when using a light sidebar color
+//$sidebar-light-color: #000;
+//$sidebar-light-link-color: #333;
+$sidebar-light-color: #666;
+$sidebar-light-link-color: #999;

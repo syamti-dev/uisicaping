@@ -1,0 +1,27 @@
+<aside class="app-sidebar">
+    <div class="app-sidebar-user"><img class="app-sidebar-user-avatar" [src]="profilePicture" alt="{{ fullUserName }}">
+        <div>
+            <p class="app-sidebar-user-name">{{ fullUserName }}</p>
+            <p class="app-sidebar-user-designation">{{ jobDescription }}</p>
+        </div>
+    </div>
+    <div *ngFor="let systemItem of menuItems">
+        <span class="menu-system-name">{{ systemItem.name }}</span>
+        <ul class="app-menu">
+            <li *ngFor="let item of systemItem.menuItems" [ngClass]="{'treeview': item.menuItems && item.menuItems.length > 0}" routerLinkActive="active">
+                <a class="app-menu-item" href="#" [routerLink]="item.menuItems && item.menuItems.length > 0 ? [] : [item.url]" [attr.data-toggle]="item.menuItems && item.menuItems.length > 0 ? 'treeview' : null">
+                    <i class='{{ "app-menu-icon fa fa-" + item.faIcon }}'></i>
+                    <span class="app-menu-label">{{ item.name }}</span>
+                    <i class="treeview-indicator fa fa-angle-down" *ngIf="item.menuItems && item.menuItems.length > 0"></i>
+                </a>
+                <ul class="treeview-menu" *ngIf="item.menuItems && item.menuItems.length > 0">
+                    <li *ngFor="let iitem of item.menuItems">
+                        <a href="#" [routerLink]="[iitem.url]" class="treeview-item">
+                            <i class="icon fa fa-angle-right"></i> {{ iitem.name }}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
